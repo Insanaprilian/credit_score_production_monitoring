@@ -1,5 +1,6 @@
 # credit_score_production_monitoring
-module to support credit score performance stability for one of digital bank client, integrating PSI tracking and data drifting visualization. The module removed manual monitoring time and became a part of regulatory monitoring
+The module to support credit score monitoring for one of the digital bank client, integrating PSI tracking and data drifting visualization. 
+This helps clients to remove manual monitoring and becoming part of regulatory monitoring
 
 ## Project Introduction
 In production credit scoring, model performance can degrade over time due to population drift, economic changes, or data quality issues. This framework provides automated monthly monitoring to detect stability issues before they impact business decisions.
