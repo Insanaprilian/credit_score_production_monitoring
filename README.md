@@ -75,18 +75,18 @@ PSI = Σ ((Actual% - Expected%) × ln(Actual% / Expected%))
 ```
 
 **Interpretation:**
-- `PSI < 0.1`: **Stable** - No significant change
-- `0.1 ≤ PSI < 0.25`: **Moderate Drift** - Investigate and monitor
-- `PSI ≥ 0.25`: **High Drift** - Immediate action required
+- `PSI < 0.1`: No significant change
+- `0.1 ≤ PSI < 0.25`: Investigate and monitor
+- `PSI ≥ 0.25`: Immediate action required
 
 ### Implementation Approach
 
-1. **Baseline Establishment**: Use development/training dataset as anchor
-2. **Binning Strategy**: 
+1. Baseline Establishment: Use development/training dataset as anchor
+2. Binning Strategy: 
    - Continuous variables: 10 quantile-based bins
    - Scores: 20 bins for granular tracking
-3. **Monthly Comparison**: Compare production data against frozen baseline
-4. **Multi-level Monitoring**: Track both individual features and overall score
+3. Monthly Comparison: Compare production data against frozen baseline
+4. Multi-level Monitoring: Track both individual features and overall score
 
 ## Quick Start
 
@@ -155,13 +155,13 @@ Features with Drift: 3
 Drift Percentage: 20.0%
 
 Top 5 Drifting Features:
-1. credit_utilization       PSI: 0.1523  ⚠️
-2. debt_to_income_ratio     PSI: 0.1247  ⚠️  
-3. annual_income            PSI: 0.1089  ⚠️
-4. age                      PSI: 0.0723  ✓
-5. number_of_accounts       PSI: 0.0615  ✓
+1. credit_utilization       PSI: 0.1523
+2. debt_to_income_ratio     PSI: 0.1247  
+3. annual_income            PSI: 0.1089
+4. age                      PSI: 0.0723
+5. number_of_accounts       PSI: 0.0615
 
-Overall Assessment: ⚠️  MONITORING REQUIRED
+Overall Assessment: MONITORING REQUIRED
 ```
 
 ### Visual Dashboard
