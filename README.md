@@ -1,9 +1,10 @@
 # credit_score_production_monitoring
-The module to support credit score monitoring for one of the digital bank client, integrating PSI tracking and data drifting visualization. 
-This helps clients to remove manual monitoring and becoming part of regulatory monitoring
+Production-grade module to support credit score monitoring for one of the digital bank client, integrating PSI tracking and data drifting detection. 
+This helps clients to remove manual monitoring and become part of regulatory monitoring
+[![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 
 ## Project Introduction
-In production credit scoring, model performance can degrade over time due to population drift, economic changes, or data quality issues. This framework provides automated monthly monitoring to detect stability issues before they impact business decisions.
+In production credit scoring, model performance/stability can degrade over time due to population drift, economic changes, or data quality issues. This framework provides automated monthly monitoring to detect stability issues before they impact business decisions.
 
 ## Business Problem
 Credit models deployed in production face several challenges:
@@ -20,7 +21,7 @@ Without correct monitoring, these issues can drives to:
 4. Reputational damage
 
 ## Solution
-This repos implement automatic Population Stability Index (PSI) based monitoring to:
+This module implements automatic Population Stability Index (PSI) based monitoring to:
 1. Track feature and score distribution drift
 2. Generate alerts when thresholds are breached
 3. Produce executive reports and dashboards
@@ -33,48 +34,8 @@ This repos implement automatic Population Stability Index (PSI) based monitoring
 4. Batch Processing: Monitor multiple months simultaneously
 5. Production-Ready: Includes error handling, logging, and data validation
 
-# Credit Score Model Monitoring Framework
 
-> **A production-grade framework for monitoring credit scoring model stability through automated PSI tracking and drift detection.**
-
-[![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-
-## 📋 Project Overview
-
-In production credit scoring systems, model performance can degrade over time due to population drift, economic changes, or data quality issues. This framework provides **automated monthly monitoring** to detect stability issues before they impact business decisions.
-
-### Business Problem
-
-Credit models deployed in production face several challenges:
-- **Population Drift**: Customer demographics shift over time
-- **Economic Changes**: Macroeconomic conditions affect credit behavior  
-- **Data Quality**: Upstream pipeline changes can introduce anomalies
-- **Regulatory Requirements**: Need documented evidence of model stability
-
-**Without proper monitoring**, these issues can lead to:
-- Inaccurate risk assessments
-- Poor lending decisions
-- Regulatory non-compliance
-- Reputational damage
-
-### Solution
-
-This framework implements **Population Stability Index (PSI)** based monitoring to:
-- ✅ Automatically track feature and score distribution drift
-- ✅ Generate alerts when thresholds are breached
-- ✅ Produce executive-ready reports and dashboards
-- ✅ Enable early intervention before performance degradation
-
-## 🎯 Key Features
-
-- **Automated PSI Calculation**: Tracks both feature-level and score-level stability
-- **Configurable Thresholds**: Customize alert levels based on risk appetite
-- **Comprehensive Reporting**: Executive summaries, technical reports, and visual dashboards
-- **Batch Processing**: Monitor multiple months simultaneously
-- **Production-Ready**: Includes error handling, logging, and data validation
-
-## 🏗️ Architecture
+## Architecture
 
 ```
 ┌─────────────────┐
@@ -102,7 +63,7 @@ This framework implements **Population Stability Index (PSI)** based monitoring 
 └───────┘    └─────────┘
 ```
 
-## 📊 Methodology
+## Methodology
 
 ### Population Stability Index (PSI)
 
@@ -126,7 +87,7 @@ PSI = Σ ((Actual% - Expected%) × ln(Actual% / Expected%))
 3. **Monthly Comparison**: Compare production data against frozen baseline
 4. **Multi-level Monitoring**: Track both individual features and overall score
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Installation
 
@@ -176,7 +137,7 @@ dashboard = MonitoringDashboard()
 dashboard.create_executive_summary(summary_df)
 ```
 
-## 📈 Sample Output
+## Sample Output
 
 ### Monthly Monitoring Report
 ```
