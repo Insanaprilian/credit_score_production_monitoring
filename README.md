@@ -1,6 +1,7 @@
 # credit_score_production_monitoring
 Production-grade module to support credit score monitoring for one of the digital bank client, integrating PSI tracking and data drifting detection. 
 This helps clients to remove manual monitoring and become part of regulatory monitoring
+
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 
 ## Project Introduction
